@@ -6,10 +6,11 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * swagger2文档测试
  */
-@RestController
+@Controller
 @RequestMapping(value = "/user")
 public class UserController {
 
@@ -32,8 +33,10 @@ public class UserController {
      */
     @ApiOperation(value = "获取用户列表",notes = "Get方式获取列表") //  swagger2文档描述
     @RequestMapping(value = "",method = RequestMethod.GET)
-    public List<User> getUserList(){
-        return userService.findAll();
+    public String getUserList(ModelMap map){
+        List<User> list = userService.findAll();
+        map.addAttribute("users",list);
+        return "user";
     }
 
     /**

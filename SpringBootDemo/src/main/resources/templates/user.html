@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>user List</title>
+</head>
+<body>
+    <table style="border:1px solid orangered">
+        <thead>
+        <tr>
+            <th th:text="用户主键">用户主键</th>
+            <th th:text="用户名">用户名</th>
+            <th th:text="年龄">年龄</th>
+            <th th:text="操作1">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}">id</td>
+            <td th:text="${user.name}">name</td>
+            <td th:text="${user.age}">age</td>
+            <td><a href="#" th:href="@{/index}">删除</a>&nbsp;&nbsp;<a href="#" th:href="@{/user/abc}">修改</a></td>
+            <!--<td th:text="${#numbers.formatDecimal(prod.price,1,2)}">0.99</td>-->
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
