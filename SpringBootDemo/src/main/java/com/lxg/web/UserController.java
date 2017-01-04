@@ -8,10 +8,13 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -32,11 +35,11 @@ public class UserController {
      * 获取用户列表
      */
     @ApiOperation(value = "获取用户列表",notes = "Get方式获取列表") //  swagger2文档描述
-    @RequestMapping(value = "",method = RequestMethod.GET)
+    @RequestMapping(value = "list.action",method = RequestMethod.GET)
     public String getUserList(ModelMap map){
         List<User> list = userService.findAll();
         map.addAttribute("users",list);
-        return "user";
+        return "user/user";
     }
 
     /**
@@ -46,8 +49,13 @@ public class UserController {
     @ApiOperation(value = "添加用户",notes = "添加单个用户到数据库") //  swagger2文档描述
     @ApiImplicitParam(name = "user",value = "用户实体user",required = true,dataType = "User") //  swagger2文档描述
     @RequestMapping(value = "/add.action",method = RequestMethod.POST)
-    public void addUser(@RequestBody User user){
+    public void addUser(@RequestBody User user, HttpServletResponse response){
         userService.create(user.getName(),user.getAge());
+        try {
+            response.sendRedirect("/user/list.action");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -62,5 +70,26 @@ public class UserController {
     @RequestMapping(value = "/modify.action",method = RequestMethod.POST)
     public void modify(@RequestBody User user){
         userService.updateUser(user);
+    }
+
+    /**
+     * 按id删除用户
+     * @param id
+     */
+    @ApiOperation(value = "用户删除",notes = "按用户主键删除用户")  //  swagger2文档描述
+    @ApiImplicitParam(name = "id",value = "用户主键",required = true,dataType = "Integer")  //  swagger2文档描述
+    @RequestMapping(value = "/del.action{id}",method = RequestMethod.GET)
+    public void delById(@PathVariable Integer id){
+        System.out.print("------11------\n");
+        userService.deleteById(id);
+    }
+
+    /**
+     * 添加页面
+     * @return
+     */
+    @RequestMapping("/goAdd.action")
+    public String goAdd(){
+        return "user/add";
     }
 }

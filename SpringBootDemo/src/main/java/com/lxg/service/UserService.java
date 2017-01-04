@@ -40,6 +40,12 @@ public interface UserService {
     void deleteByName(String name);
 
     /**
+     * 按主键删除用户
+     * @param id
+     */
+    void deleteById(Integer id);
+
+    /**
      * 获取用户总量
      */
     Integer getAllUsers();

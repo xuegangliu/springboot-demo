@@ -51,6 +51,13 @@ public class UserServiceImpl implements UserService {
         jdbcTemplate.update("delete from USER where NAME = ?", name);
     }
 
+    // 按主键删除用户
+    @Override
+    public void deleteById(Integer id) {
+        String sql = "delete from user where id = ?";
+        jdbcTemplate.update(sql,id);
+    }
+
     // 获取用户数量
     @Override
     public Integer getAllUsers() {

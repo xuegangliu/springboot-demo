@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+<h1 th:text="${index}">Hello,Word!</h1>
+<ul>
+    <li><a href="#">第一个链接</a></li>
+    <li><a href="#" th:text="${rest}" th:href="@{/rest/index.action}">第二个链接</a></li>
+    <li><a href="#" th:text="${user}" th:href="@{/user/list.action}">第三个链接</a></li>
+    <li><a href="#">第四个链接</a></li>
+    <li><a href="#">第五个链接</a></li>
+
+</ul>
+</body>
+</html>

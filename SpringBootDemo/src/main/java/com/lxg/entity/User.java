@@ -1,5 +1,8 @@
 package com.lxg.entity;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 
 /**
@@ -9,6 +12,7 @@ import java.io.Serializable;
 /**
  * 用户实体类
  */
+@Component(value = "user")
 public class User implements Serializable {
 
     /**
