@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import springfox.documentation.annotations.ApiIgnore;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -68,8 +69,13 @@ public class UserController {
             @ApiImplicitParam(name = "user", value = "用户实体user", required = true, dataType = "User")
     })
     @RequestMapping(value = "/modify.action",method = RequestMethod.POST)
-    public void modify(@RequestBody User user){
+    public void modify(@RequestBody User user,HttpServletResponse response){
         userService.updateUser(user);
+        try {
+            response.sendRedirect("user/list.action");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -78,16 +84,21 @@ public class UserController {
      */
     @ApiOperation(value = "用户删除",notes = "按用户主键删除用户")  //  swagger2文档描述
     @ApiImplicitParam(name = "id",value = "用户主键",required = true,dataType = "Integer")  //  swagger2文档描述
-    @RequestMapping(value = "/del.action{id}",method = RequestMethod.GET)
-    public void delById(@PathVariable Integer id){
-        System.out.print("------11------\n");
+    @RequestMapping(value = "/del.action/{id}",method = RequestMethod.GET)
+    public void delById(@PathVariable Integer id,HttpServletResponse response){
         userService.deleteById(id);
+        try {
+            response.sendRedirect("/user/list.action");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
      * 添加页面
      * @return
      */
+    @ApiIgnore
     @RequestMapping("/goAdd.action")
     public String goAdd(){
         return "user/add";
