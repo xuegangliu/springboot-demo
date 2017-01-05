@@ -1,5 +1,6 @@
-# NoSQL���ݿ���ϰ
+# NoSQL数据库练习
 ## Redis
-- **redis����ʹ��**
+- **redis配置使用**
+
 ## Mongo
-- **mongoʹ��(δ���)**
+- **mongo使用(未完成)**
