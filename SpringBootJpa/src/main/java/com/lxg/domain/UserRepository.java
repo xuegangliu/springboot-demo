@@ -2,6 +2,7 @@ package com.lxg.domain;
 
 import com.lxg.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -43,5 +44,9 @@ public interface UserRepository extends JpaRepository<User,Integer>{
      */
     @Query("from User u where u.name=:name")    // jpa hql实现
     User findUser(@Param("name") String name);
+
+    @Modifying
+    @Query("update User u set u.name=?1,u.age=?2 where u.id=?3")
+    void updateUser(String name,Integer age,Integer id);
 
 }

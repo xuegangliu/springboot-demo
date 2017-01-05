@@ -2,10 +2,11 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8" />
-    <title></title>
+    <title>用户列表</title>
 </head>
 <body>
 <h1 th:text="${des}">Hello,Word!</h1>
+<a href="#" th:href="@{/user/goAdd.action}">添加</a>
 <table>
     <tr>
         <th th:text="用户账号">用户id</th>
@@ -17,7 +18,10 @@
         <td th:text="${user.id}">12</td>
         <td th:text="${user.name}">张三</td>
         <td th:text="${user.age}">15</td>
-        <td><a href="#" th:href="@{/user/del.action(id=${user.id})}">删除</a>&nbsp;<a href="#">修改</a></td>
+        <td>
+            <a href="#" th:href="@{/user/del.action/{id}(id=${user.id})}">删除</a>&nbsp;
+            <a href="#">修改</a>
+        </td>
     </tr>
 </table>
 </body>
