@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>首页</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>用户列表</h1>
+    <table style="border:1px solid orangered">
+        <thead>
+        <tr>
+            <th th:text="用户主键">用户主键</th>
+            <th th:text="用户名">用户名</th>
+            <th th:text="年龄">年龄</th>
+            <th th:text="操作">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}">id</td>
+            <td th:text="${user.name}">name</td>
+            <td th:text="${user.age}">age</td>
+            <td>
+                <a href="#" th:href="@{/user/del.action/{id}(id=${user.id})}">删除</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
