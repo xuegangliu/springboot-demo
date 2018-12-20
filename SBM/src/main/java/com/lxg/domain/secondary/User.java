@@ -1,4 +1,4 @@
-package com.lxg.domain;
+package com.lxg.domain.secondary;
 
 import java.io.Serializable;
 
@@ -19,7 +19,7 @@ public class User implements Serializable {
     /**
      * 用户名
      */
-    private String Name;
+    private String name;
 
     /**
      * 用户年龄
@@ -31,12 +31,12 @@ public class User implements Serializable {
 
     public User(Long id, String name, Integer age) {
         this.id = id;
-        Name = name;
+        name = name;
         this.age = age;
     }
 
     public User(String name, Integer age) {
-        Name = name;
+        name = name;
         this.age = age;
     }
 
@@ -49,11 +49,11 @@ public class User implements Serializable {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        name = name;
     }
 
     public Integer getAge() {

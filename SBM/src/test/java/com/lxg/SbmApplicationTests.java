@@ -1,19 +1,12 @@
 package com.lxg;
 
-import com.lxg.domain.User;
-import com.lxg.mapper.UserMapper;
-import org.junit.Assert;
-import org.junit.Before;
+import com.lxg.domain.primary.User;
+import com.lxg.mapper.primary.UserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Rollback;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
-import sun.org.mozilla.javascript.internal.EcmaError;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,7 +1,7 @@
-package com.lxg.mapper;
+package com.lxg.mapper.primary;
 
-import com.lxg.domain.User;
-import com.lxg.mapper.builder.UserSqlBuilder;
+import com.lxg.domain.primary.User;
+import com.lxg.mapper.primary.builder.UserSqlBuilder;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.lxg.mapper.builder;
+package com.lxg.mapper.secondary.builder;
 
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.jdbc.SQL;
