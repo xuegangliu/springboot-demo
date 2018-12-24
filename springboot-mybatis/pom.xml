@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.lxg</groupId>
-	<artifactId>sbm</artifactId>
+	<artifactId>springboot-mybatis</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>SBM</name>
-	<description>SpringBoot-Mybatis project for Spring Boot</description>
+	<name>springboot-mybatis</name>
+	<description>springboot-mybatis</description>
 
 	<parent>
 		<groupId>com.lxg</groupId>

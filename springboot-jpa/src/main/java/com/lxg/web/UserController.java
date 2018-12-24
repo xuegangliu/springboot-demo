@@ -8,11 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import springfox.documentation.annotations.ApiIgnore;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.nio.file.attribute.UserPrincipal;
 
 /**
  * Created by 刘雪岗 on 2017/1/4.
@@ -55,7 +53,7 @@ public class UserController {
     @ApiImplicitParam(name = "id",value = "用户主键",required = true,dataType = "Integer")
     @RequestMapping(value = "/del.action/{id}",method = RequestMethod.GET)
     public void del(@PathVariable Integer id, HttpServletResponse response){
-        userRepository.delete(id);
+        userRepository.delete(userRepository.findById(id).get());
         try {
             response.sendRedirect("/user/list.action");
         } catch (IOException e) {

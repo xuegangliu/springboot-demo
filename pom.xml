@@ -22,16 +22,16 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <dependencies>
-<!--        <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-        </dependency>-->
+        </dependency>
     </dependencies>
 
     <modules>
-        <module>SBM</module>
-        <module>SpringBootDemo</module>
-        <module>SpringBootNosql</module>
-        <module>SpringBootJpa</module>
+        <module>springboot-mybatis</module>
+        <module>springboot-sample</module>
+        <module>springboot-nosql</module>
+        <module>springboot-jpa</module>
     </modules>
 </project>

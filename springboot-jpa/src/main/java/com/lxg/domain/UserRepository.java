@@ -1,10 +1,11 @@
 package com.lxg.domain;
 
-import com.lxg.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+
+import java.util.Optional;
 
 /**
  * Created by 刘雪岗 on 2017/1/4.
@@ -27,7 +28,7 @@ public interface UserRepository extends JpaRepository<User,Integer>{
      * @param id
      * @return
      */
-    User findById(Integer id);
+    Optional<User> findById(Integer id);
 
     /**
      * 按用户名和用户年龄查询用户
