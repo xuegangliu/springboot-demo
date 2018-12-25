@@ -1,5 +1,6 @@
-package com.lxg.jpa.domain;
+package com.lxg.jpa.dao;
 
+import com.lxg.jpa.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

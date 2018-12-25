@@ -1,7 +1,7 @@
 package com.lxg.jpa;
 
 import com.lxg.jpa.domain.User;
-import com.lxg.jpa.domain.UserRepository;
+import com.lxg.jpa.dao.UserRepository;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
