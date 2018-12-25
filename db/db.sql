@@ -1,5 +1,6 @@
 -- auto-generated definition
 use lxg_test;
+DROP TABLE IF EXISTS user;
 create table user
 (
   id   int auto_increment
@@ -8,6 +9,7 @@ create table user
   age  int         null
 );
 use lxg_test1;
+DROP TABLE IF EXISTS user;
 create table user
 (
   id   int auto_increment
