@@ -1,4 +1,4 @@
-package com.lxg.web;
+package com.lxg.jpa.web;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.ui.ModelMap;

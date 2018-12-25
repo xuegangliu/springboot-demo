@@ -1,4 +1,4 @@
-package com.lxg;
+package com.lxg.jpa.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,18 +21,18 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.lxg.web"))
+                .apis(RequestHandlerSelectors.basePackage("com.lxg.jpa.web"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring Boot中使用Swagger2构建RESTful APIs")
-                .description("更多Spring Boot相关文章请关注：http://blog.didispace.com/")
-                .termsOfServiceUrl("http://blog.didispace.com/")
-                .contact("根据[程序猿DD]博客整理学习所写的Demo")
-                .version("1.0")
+                .title("springboot-jpa API")
+                .description("springboot-jpa API")
+                .termsOfServiceUrl("http://localhost:8081/jpa/swagger-ui.html#/")
+                .contact("springboot 练习")
+                .version("v0.0.1")
                 .build();
     }
 }

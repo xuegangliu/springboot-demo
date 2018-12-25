@@ -1,6 +1,6 @@
-package com.lxg.web;
+package com.lxg.jpa.web;
 
-import com.lxg.exception.MyException;
+import com.lxg.jpa.exception.MyException;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package com.lxg.domain;
+package com.lxg.jpa.domain;
 
 /**
  * Created by 刘雪岗 on 2017/1/4.

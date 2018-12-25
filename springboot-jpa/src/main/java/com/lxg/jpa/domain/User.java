@@ -1,4 +1,4 @@
-package com.lxg.domain;
+package com.lxg.jpa.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

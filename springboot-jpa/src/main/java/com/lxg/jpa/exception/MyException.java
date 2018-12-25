@@ -1,4 +1,4 @@
-package com.lxg.exception;
+package com.lxg.jpa.exception;
 
 /**
  * Created by 刘雪岗 on 2017/1/4.

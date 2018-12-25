@@ -1,7 +1,7 @@
-package com.lxg.web;
+package com.lxg.jpa.web;
 
-import com.lxg.domain.User;
-import com.lxg.domain.UserRepository;
+import com.lxg.jpa.domain.User;
+import com.lxg.jpa.domain.UserRepository;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
