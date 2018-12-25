@@ -1,23 +1,18 @@
 package com.lxg.service;
 
-import com.lxg.entity.User;
+import com.lxg.sample.entity.User;
+import com.lxg.sample.mapper.UserRowMapper;
+import com.lxg.sample.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
 /**
  * Created by 刘雪岗 on 2017/1/4.
- */
-
-/**
  * jdbcTemplate 实现
  */
-@SuppressWarnings("SpringJavaAutowiringInspection")
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -75,18 +70,5 @@ public class UserServiceImpl implements UserService {
     public void updateUser(User user) {
         String sql = "update user set name= ?,age= ? where id = ?";
         jdbcTemplate.update(sql,user.getName(),user.getAge(),user.getId());
-    }
-
-
-    // 封装RowMapper
-    class UserRowMapper implements RowMapper<User> {
-        public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-            //rs为返回结果集，以每行为单位封装着
-            User user = new User();
-            user.setId(rs.getInt("id"));
-            user.setName(rs.getString("name"));
-            user.setAge(rs.getInt("age"));
-            return user;
-        }
     }
 }

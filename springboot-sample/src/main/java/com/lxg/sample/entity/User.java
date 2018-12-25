@@ -1,18 +1,15 @@
-package com.lxg.entity;
+package com.lxg.sample.entity;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
 /**
  * Created by 刘雪岗 on 2017/1/3.
- */
-
-/**
  * 用户实体类
  */
-@Component(value = "user")
+@Component
 public class User implements Serializable {
 
     /**

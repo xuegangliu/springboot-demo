@@ -1,7 +1,6 @@
-package com.lxg.exception;
+package com.lxg.sample.exception;
 
-import com.lxg.entity.ErrorInfo;
-import org.springframework.web.bind.annotation.ControllerAdvice;
+import com.lxg.sample.base.ErrorInfo;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;

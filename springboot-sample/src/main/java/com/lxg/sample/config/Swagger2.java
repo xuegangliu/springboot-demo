@@ -1,4 +1,4 @@
-package com.lxg;
+package com.lxg.sample.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,9 +12,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * Created by 刘雪岗 on 2017/1/3.
- */
-
-/**
  * Swagger2的配置
  */
 @Configuration  // Spring来加载该类配置
@@ -35,11 +32,11 @@ public class Swagger2 {
     //  文档描述信息
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring Boot中使用Swagger2构建RESTful APIs 及简单的Demo")
-                .description("更多Spring Boot相关文章请关注：http://blog.didispace.com/")
-                .termsOfServiceUrl("http://blog.didispace.com/")
-                .contact("根据[程序猿DD]的博客，所练习的Demo")
-                .version("1.0")
+                .title("springboot-sample")
+                .description("springboot-sample")
+                .termsOfServiceUrl("localhost:8082/sample")
+                .contact("springboot-sample")
+                .version("v0.0.1")
                 .build();
     }
 }

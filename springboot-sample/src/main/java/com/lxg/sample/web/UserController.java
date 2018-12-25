@@ -1,7 +1,7 @@
-package com.lxg.web;
+package com.lxg.sample.web;
 
-import com.lxg.entity.User;
-import com.lxg.service.UserService;
+import com.lxg.sample.entity.User;
+import com.lxg.sample.service.UserService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -30,7 +30,7 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserService userService;
+    UserService userService;
 
     /**
      * 获取用户列表

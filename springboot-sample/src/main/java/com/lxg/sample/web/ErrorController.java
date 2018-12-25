@@ -1,6 +1,6 @@
-package com.lxg.web;
+package com.lxg.sample.web;
 
-import com.lxg.exception.MyException;
+import com.lxg.sample.exception.MyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import springfox.documentation.annotations.ApiIgnore;

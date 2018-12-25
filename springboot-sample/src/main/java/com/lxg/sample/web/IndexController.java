@@ -1,4 +1,4 @@
-package com.lxg.web;
+package com.lxg.sample.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

@@ -1,14 +1,11 @@
-package com.lxg.service;
+package com.lxg.sample.service;
 
-/**
- * Created by 刘雪岗 on 2017/1/3.
- */
-
-import com.lxg.entity.User;
+import com.lxg.sample.entity.User;
 
 import java.util.List;
 
 /**
+ * Created by 刘雪岗 on 2017/1/3.
  * 用户接口
  */
 public interface UserService {
