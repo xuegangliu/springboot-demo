@@ -1,4 +1,4 @@
-package com.lxg.web;
+package com.lxg.mybatis.web;
 
 
 import org.springframework.stereotype.Controller;

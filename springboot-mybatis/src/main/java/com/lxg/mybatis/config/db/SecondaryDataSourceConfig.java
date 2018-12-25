@@ -1,4 +1,4 @@
-//package com.lxg.config.db;
+//package com.lxg.mybatis.config.db;
 //
 //
 //import org.apache.ibatis.session.SqlSessionFactory;
@@ -20,7 +20,7 @@
 //@MapperScan(basePackages = SecondaryDataSourceConfig.PACKAGE, sqlSessionFactoryRef = "secondarySqlSessionFactory")
 //public class SecondaryDataSourceConfig {
 //    // 精确到 master 目录，以便跟其他数据源隔离
-//    static final String PACKAGE = "com.lxg.mapper.secondary";
+//    static final String PACKAGE = "com.lxg.mybatis.mapper.secondary";
 //    static final String MAPPER_LOCATION = "classpath:mybatis/mapper/secondary/**.xml";
 //
 //    @Bean(name = "secondarySqlSessionFactory")

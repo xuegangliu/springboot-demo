@@ -1,4 +1,4 @@
-package com.lxg.config.db;
+package com.lxg.mybatis.config.db;
 
 
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 @MapperScan(basePackages = PrimaryDataSourceConfig.PACKAGE, sqlSessionFactoryRef = "primarySqlSessionFactory")
 public class PrimaryDataSourceConfig {
     // 精确到 master 目录，以便跟其他数据源隔离
-    static final String PACKAGE = "com.lxg.mapper.primary";
+    static final String PACKAGE = "com.lxg.mybatis.mapper.primary";
     static final String MAPPER_LOCATION = "classpath:mybatis/mapper/primary/**.xml";
 
     @Bean(name = "primarySqlSessionFactory")

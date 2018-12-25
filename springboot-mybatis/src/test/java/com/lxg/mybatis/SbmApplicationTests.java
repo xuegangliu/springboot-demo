@@ -1,7 +1,7 @@
-package com.lxg;
+package com.lxg.mybatis;
 
-import com.lxg.domain.primary.User;
-import com.lxg.mapper.primary.UserMapper;
+import com.lxg.mybatis.domain.primary.User;
+import com.lxg.mybatis.mapper.primary.UserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

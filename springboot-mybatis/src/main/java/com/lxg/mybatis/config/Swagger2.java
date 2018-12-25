@@ -1,4 +1,4 @@
-package com.lxg.config;
+package com.lxg.mybatis.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

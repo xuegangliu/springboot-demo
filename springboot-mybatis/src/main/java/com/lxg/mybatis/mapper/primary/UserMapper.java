@@ -1,7 +1,7 @@
-package com.lxg.mapper.secondary;
+package com.lxg.mybatis.mapper.primary;
 
-import com.lxg.domain.secondary.User;
-import com.lxg.mapper.secondary.builder.UserSqlBuilder;
+import com.lxg.mybatis.domain.primary.User;
+import com.lxg.mybatis.mapper.primary.builder.UserSqlBuilder;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

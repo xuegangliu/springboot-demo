@@ -1,4 +1,4 @@
-package com.lxg.domain.primary;
+package com.lxg.mybatis.domain.primary;
 
 import java.io.Serializable;
 

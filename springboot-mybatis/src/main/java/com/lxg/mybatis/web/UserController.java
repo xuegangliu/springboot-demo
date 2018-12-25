@@ -1,6 +1,6 @@
-package com.lxg.web;
+package com.lxg.mybatis.web;
 
-import com.lxg.mapper.primary.UserMapper;
+import com.lxg.mybatis.mapper.primary.UserMapper;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
