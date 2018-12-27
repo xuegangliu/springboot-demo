@@ -1,9 +1,6 @@
-package com.lxg.jpa.domain;
+package com.lxg.jpa.domain.primary;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by 刘雪岗 on 2017/1/4.
@@ -12,14 +9,16 @@ import javax.persistence.Id;
 /**
  * 用户实体类
  */
+@Table(name = "user")
 @Entity  // jpa实体注解  需要有空构造器
-public class User {
+public class UserPrimary {
 
     /**
      * 主键id
      */
     @Id // jpa 用户id主键注解
-    @GeneratedValue //jpa 用户主键id自增注解
+//    @GeneratedValue //jpa 用户主键id自增注解
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
     /**
@@ -34,10 +33,10 @@ public class User {
     @Column(nullable = false)   // jpa 用户年龄注解 不为空
     private Integer age;
 
-    public User() {
+    public UserPrimary() {
     }
 
-    public User(String name, Integer age) {
+    public UserPrimary(String name, Integer age) {
         this.name = name;
         this.age = age;
     }

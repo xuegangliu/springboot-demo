@@ -1,10 +1,11 @@
-package com.lxg.jpa.dao;
+package com.lxg.jpa.dao.secondary;
 
-import com.lxg.jpa.domain.User;
+import com.lxg.jpa.domain.secondary.UserSecondary;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
@@ -15,21 +16,22 @@ import java.util.Optional;
 /**
  * jpa 实现(方法命名规则)通过解析方法名创建查询
  */
-public interface UserRepository extends JpaRepository<User,Integer>{
+@Repository
+public interface UserSecondaryRepository extends JpaRepository<UserSecondary,Integer>{
 
     /**
      * 按用户名查询用户
      * @param name
      * @return
      */
-    User findByName(String name);
+    UserSecondary findByName(String name);
 
     /**
      * 按id删除用户
      * @param id
      * @return
      */
-    Optional<User> findById(Integer id);
+    Optional<UserSecondary> findById(Integer id);
 
     /**
      * 按用户名和用户年龄查询用户
@@ -37,18 +39,18 @@ public interface UserRepository extends JpaRepository<User,Integer>{
      * @param age
      * @return
      */
-    User findByNameAndAge(String name,Integer age);
+    UserSecondary findByNameAndAge(String name, Integer age);
 
     /**
      * 按用户名查询
      * @param name
      * @return
      */
-    @Query("from User u where u.name=:name")    // jpa hql实现
-    User findUser(@Param("name") String name);
+    @Query("from UserSecondary u where u.name=:name")    // jpa hql实现
+    UserSecondary findUser(@Param("name") String name);
 
     @Modifying
-    @Query("update User u set u.name=?1,u.age=?2 where u.id=?3")
-    void updateUser(String name,Integer age,Integer id);
+    @Query("update UserSecondary u set u.name=?1,u.age=?2 where u.id=?3")
+    void updateUser(String name, Integer age, Integer id);
 
 }

@@ -1,7 +1,9 @@
 package com.lxg.jpa;
 
-import com.lxg.jpa.domain.User;
-import com.lxg.jpa.dao.UserRepository;
+import com.lxg.jpa.dao.primary.UserPrimaryRepository;
+import com.lxg.jpa.dao.secondary.UserSecondaryRepository;
+import com.lxg.jpa.domain.primary.UserPrimary;
+import com.lxg.jpa.domain.secondary.UserSecondary;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,22 +16,33 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class SpringBootJpaApplicationTests {
 
 	@Autowired
-	private UserRepository userRepository;
+	private UserSecondaryRepository userRepository;
+	@Autowired
+	private UserPrimaryRepository userPrimaryRepository;
 
 	@Test
 	public void test() throws Exception {
 
 		// 创建10条记录
-		userRepository.save(new User("AAA", 10));
-		userRepository.save(new User("BBB", 20));
-		userRepository.save(new User("CCC", 30));
-		userRepository.save(new User("DDD", 40));
-		userRepository.save(new User("EEE", 50));
-		userRepository.save(new User("FFF", 60));
-		userRepository.save(new User("GGG", 70));
-		userRepository.save(new User("HHH", 80));
-		userRepository.save(new User("III", 90));
-		userRepository.save(new User("JJJ", 100));
+		userRepository.save(new UserSecondary("AAA", 10));
+		userRepository.save(new UserSecondary("BBB", 20));
+		userRepository.save(new UserSecondary("CCC", 30));
+		userRepository.save(new UserSecondary("DDD", 40));
+		userRepository.save(new UserSecondary("EEE", 50));
+		userRepository.save(new UserSecondary("FFF", 60));
+		userRepository.save(new UserSecondary("GGG", 70));
+		userRepository.save(new UserSecondary("HHH", 80));
+		userRepository.save(new UserSecondary("III", 90));
+		userRepository.save(new UserSecondary("JJJ", 100));
+		userPrimaryRepository.save(new UserPrimary("BBB", 20));
+		userPrimaryRepository.save(new UserPrimary("CCC", 30));
+		userPrimaryRepository.save(new UserPrimary("DDD", 40));
+		userPrimaryRepository.save(new UserPrimary("EEE", 50));
+		userPrimaryRepository.save(new UserPrimary("FFF", 60));
+		userPrimaryRepository.save(new UserPrimary("GGG", 70));
+		userPrimaryRepository.save(new UserPrimary("HHH", 80));
+		userPrimaryRepository.save(new UserPrimary("III", 90));
+		userPrimaryRepository.save(new UserPrimary("JJJ", 100));
 
 		// 测试findAll, 查询所有记录
 		Assert.assertEquals(10, userRepository.findAll().size());
