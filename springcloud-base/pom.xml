@@ -11,8 +11,8 @@
     <groupId>com.lxg</groupId>
     <artifactId>clould</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springclould</name>
-    <description>springclould-base</description>
+    <name>springcloud-base</name>
+    <description>springcloud-base</description>
 
     <properties>
         <java.version>1.8</java.version>
