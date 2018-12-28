@@ -11,7 +11,7 @@
     <groupId>com.lxg</groupId>
     <artifactId>user-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>user-service</name>
+    <name>springcloud-user-service</name>
     <description>用户服务</description>
 
     <properties>

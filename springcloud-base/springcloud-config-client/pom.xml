@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.lxg</groupId>
-    <artifactId>config-server</artifactId>
+    <artifactId>config-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springcloud-config-server</name>
-    <description>配置服务</description>
+    <name>springcloud-config-client</name>
+    <description>配置客户端</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -22,7 +22,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
         <dependency>
@@ -31,8 +31,8 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
 
