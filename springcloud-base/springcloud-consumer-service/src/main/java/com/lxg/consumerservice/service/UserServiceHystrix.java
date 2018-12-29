@@ -7,6 +7,6 @@ public class UserServiceHystrix implements UserService {
 
     @Override
     public String getUser() {
-        return "error";
+        return "this is error is user-service id down";
     }
 }
