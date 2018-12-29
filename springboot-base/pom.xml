@@ -5,12 +5,11 @@
     <parent>
         <groupId>com.lxg</groupId>
         <artifactId>demo</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>springboot-base</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>springboot-demo</artifactId>
     <packaging>pom</packaging>
 
     <name>boot</name>
