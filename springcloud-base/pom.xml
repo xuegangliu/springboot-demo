@@ -17,6 +17,7 @@
 
     <modules>
         <module>springcloud-eureka-server</module>
+        <module>springcloud-admin-server</module>
         <module>springcloud-config-server</module>
         <module>springcloud-user-service</module>
         <module>springcloud-consumer-service</module>
