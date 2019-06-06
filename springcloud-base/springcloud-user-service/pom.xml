@@ -10,7 +10,7 @@
     </parent>
     <artifactId>user-service</artifactId>
     <packaging>jar</packaging>
-    <name>springcloud-user-service</name>
+    <name>user-service</name>
     <description>用户服务</description>
 
     <properties>
@@ -42,6 +42,7 @@
     </dependencies>
 
     <build>
+        <finalName>user-service-${version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

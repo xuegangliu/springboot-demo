@@ -12,7 +12,7 @@
     <artifactId>config-server</artifactId>
     <packaging>jar</packaging>
 
-    <name>springcloud-config-server</name>
+    <name>config-server</name>
     <description>配置服务</description>
 
     <dependencies>
@@ -33,6 +33,7 @@
     </dependencies>
 
     <build>
+        <finalName>config-server-${version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

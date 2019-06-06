@@ -12,7 +12,7 @@
     <artifactId>consumer-service</artifactId>
     <packaging>jar</packaging>
 
-    <name>springcloud-consumer-service</name>
+    <name>consumer-service</name>
     <description>消费服务</description>
 
     <properties>
@@ -52,6 +52,7 @@
     </dependencies>
 
     <build>
+        <finalName>consumer-service-${version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

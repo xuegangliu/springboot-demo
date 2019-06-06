@@ -12,7 +12,7 @@
     <artifactId>gateway-service</artifactId>
     <packaging>jar</packaging>
 
-    <name>springcloud-gateway-service</name>
+    <name>gateway-service</name>
     <description>网关服务</description>
 
     <properties>
@@ -44,6 +44,7 @@
     </dependencies>
 
     <build>
+        <finalName>gateway-service-${version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

@@ -10,7 +10,6 @@
     </parent>
     <groupId>com.lxg</groupId>
     <artifactId>admin-server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>admin-server</name>
     <description>admin-server</description>
 
@@ -39,6 +38,7 @@
     </dependencies>
 
     <build>
+        <finalName>admin-server-${version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

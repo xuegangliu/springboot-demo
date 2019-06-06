@@ -12,7 +12,7 @@
     <artifactId>eureka-server</artifactId>
     <packaging>jar</packaging>
 
-    <name>springcloud-eureka-server</name>
+    <name>eureka-server</name>
     <description>服务注册中心</description>
 
     <dependencies>
@@ -36,6 +36,7 @@
     </dependencies>
 
     <build>
+        <finalName>eureka-server-${version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

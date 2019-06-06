@@ -9,11 +9,11 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>springboot-demo</artifactId>
+    <artifactId>springboot-base</artifactId>
     <packaging>pom</packaging>
 
-    <name>boot</name>
-    <url>spring-boot demo</url>
+    <name>base</name>
+    <url>spring-boot base</url>
 
     <modules>
         <module>springboot-mybatis</module>
