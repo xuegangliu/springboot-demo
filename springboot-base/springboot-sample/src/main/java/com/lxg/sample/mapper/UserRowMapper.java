@@ -8,6 +8,7 @@ import java.sql.SQLException;
 
 public class UserRowMapper implements RowMapper<User> {
     // 封装RowMapper
+    @Override
     public User mapRow(ResultSet rs, int rowNum) throws SQLException {
         //rs为返回结果集，以每行为单位封装着
         User user = new User();

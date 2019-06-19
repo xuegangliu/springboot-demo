@@ -32,7 +32,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- web -->
+		<!-- servlet -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>

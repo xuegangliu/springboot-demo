@@ -9,6 +9,7 @@ import springfox.documentation.annotations.ApiIgnore;
  * Created by 刘雪岗 on 2017/1/4.
  */
 
+@SuppressWarnings("ALL")
 @Controller
 @RequestMapping(value = "")
 public class IndexController {

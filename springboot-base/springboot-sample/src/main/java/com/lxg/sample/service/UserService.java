@@ -8,6 +8,7 @@ import java.util.List;
  * Created by 刘雪岗 on 2017/1/3.
  * 用户接口
  */
+@SuppressWarnings("ALL")
 public interface UserService {
 
     /**

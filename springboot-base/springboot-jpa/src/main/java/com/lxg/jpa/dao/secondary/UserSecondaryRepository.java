@@ -16,6 +16,7 @@ import java.util.Optional;
 /**
  * jpa 实现(方法命名规则)通过解析方法名创建查询
  */
+@SuppressWarnings("ALL")
 @Repository
 public interface UserSecondaryRepository extends JpaRepository<UserSecondary,Integer>{
 
@@ -31,6 +32,7 @@ public interface UserSecondaryRepository extends JpaRepository<UserSecondary,Int
      * @param id
      * @return
      */
+    @Override
     Optional<UserSecondary> findById(Integer id);
 
     /**

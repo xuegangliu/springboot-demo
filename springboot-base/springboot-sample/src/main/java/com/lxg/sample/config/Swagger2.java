@@ -24,7 +24,7 @@ public class Swagger2 {
                 .apiInfo(apiInfo()) //  创建该Api的基本信息（这些基本信息会展现在文档页面中）
                 .select()   //  返回一个ApiSelectorBuilder实例用来控制哪些接口暴露给Swagger来展现
                 //  扫描该包下所有Controller定义的API，并产生文档内容（除了被@ApiIgnore指定的请求）
-                .apis(RequestHandlerSelectors.basePackage("com.lxg.web"))
+                .apis(RequestHandlerSelectors.basePackage("com.lxg.servlet"))
                 .paths(PathSelectors.any())
                 .build();
     }

@@ -19,6 +19,7 @@ import java.util.Set;
  * Created by 刘雪岗 on 2017/1/5.
  * redis配置
  */
+@SuppressWarnings("ALL")
 @Configuration
 @EnableCaching
 public class RedisConfig {

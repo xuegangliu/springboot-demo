@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
 
+@SuppressWarnings("ALL")
 @RestController
 public class ConsumerController {
     Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -29,7 +30,7 @@ public class ConsumerController {
         }
         if(ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
             ip = request.getRemoteAddr();
-            if(ip.equals("127.0.0.1")){
+            if("127.0.0.1".equals(ip)){
                 //根据网卡取本机配置的IP
                 InetAddress inet=null;
                 try {

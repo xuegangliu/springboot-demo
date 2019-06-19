@@ -14,12 +14,15 @@ public class UserSqlBuilder {
         return new SQL(){{
             SELECT("*");
             FROM("user");
-            if(name == null && age ==null)
+            if(name == null && age ==null) {
                 WHERE("id=-1");
-            if(name != null)
+            }
+            if(name != null) {
                 WHERE("name = #{name}");
-            if(age != null)
+            }
+            if(age != null) {
                 WHERE("age = #{age}");
+            }
         }}.toString()+"limit 1,2";
     }
 }
