@@ -1,5 +1,6 @@
 package com.lxg.wechat.support;
 
+import com.lxg.wechat.constant.EventKeyConstant;
 import com.lxg.wechat.constant.MessageConstant;
 import org.sword.wechat4j.WechatSupport;
 
@@ -65,7 +66,10 @@ public class MyWechat extends WechatSupport {
 
     @Override
     protected void click() {
-
+        String eventKey = this.wechatRequest.getEventKey();
+        if(EventKeyConstant.CLICK_ONE.equals(eventKey)){
+            responseText("点击了click1");
+        }
     }
 
     @Override

@@ -74,7 +74,8 @@ public class CommonUtils {
             //获取 URLConnection 对象的输出流
             os = conn.getOutputStream();
             os.write(params.getBytes("UTF-8"));
-            in = new BufferedReader(new InputStreamReader(conn.getInputStream())); //获取 URLConnection 对象的输入流
+            //获取 URLConnection 对象的输入流
+            in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             String line;
             while((line = in.readLine()) != null) {
                 result.append(line);
