@@ -12,7 +12,7 @@
     <artifactId>clould</artifactId>
     <packaging>pom</packaging>
 
-    <name>cloud</name>
+    <name>clould</name>
     <description>springcloud-base</description>
 
     <modules>

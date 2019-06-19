@@ -20,7 +20,7 @@
         <module>springboot-sample</module>
         <module>springboot-nosql</module>
         <module>springboot-jpa</module>
-        <module>wechat</module>
+        <module>springboot-wechat</module>
     </modules>
 
     <build>
