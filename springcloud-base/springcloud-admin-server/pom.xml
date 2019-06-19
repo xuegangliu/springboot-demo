@@ -8,7 +8,6 @@
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>com.lxg</groupId>
     <artifactId>admin-server</artifactId>
     <name>admin-server</name>
     <description>admin-server</description>
