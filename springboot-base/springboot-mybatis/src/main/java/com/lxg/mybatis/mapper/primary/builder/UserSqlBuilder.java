@@ -4,12 +4,11 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.jdbc.SQL;
 
 /**
- * User 动态sql处理
- * Created by 刘雪岗 on 2017/1/12.
+ * 动态sql处理
+ * @author 刘雪岗 on 2017/1/12.
  */
 
 public class UserSqlBuilder {
-    // If use @Param, you can define only arguments to be used
     public String buildGetUsersByName(@Param("name") final String name,@Param("age") final Integer age) {
         return new SQL(){{
             SELECT("*");

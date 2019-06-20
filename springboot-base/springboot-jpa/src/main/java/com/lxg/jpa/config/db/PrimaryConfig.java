@@ -16,12 +16,16 @@ import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 import java.util.Map;
 
+/**
+ * @author lxg
+ * 模板引擎使用
+ */
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
         entityManagerFactoryRef="entityManagerFactoryPrimary",
         transactionManagerRef="transactionManagerPrimary",
-        basePackages= { "com.lxg.jpa.dao.primary" })//设置dao（repo）所在位置
+        basePackages= { "com.lxg.jpa.dao.primary" })
 public class PrimaryConfig {
 	@Autowired
     @Qualifier("primaryDataSource")
@@ -37,7 +41,8 @@ public class PrimaryConfig {
         return builder
                 .dataSource(primaryDataSource)
                 .properties(vendorProperties)
-                .packages("com.lxg.jpa.domain.primary") //设置实体类所在位置
+                //设置实体类所在位置
+                .packages("com.lxg.jpa.domain.primary")
                 .persistenceUnit("primaryPersistenceUnit")
                 .build();
     }
@@ -48,7 +53,6 @@ public class PrimaryConfig {
         return entityManagerFactoryPrimary(builder).getObject().createEntityManager();
     }
     
-    //事务
     @Bean(name = "transactionManagerPrimary")
     @Primary
     PlatformTransactionManager transactionManagerPrimary(EntityManagerFactoryBuilder builder) {

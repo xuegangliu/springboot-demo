@@ -12,7 +12,9 @@ import org.springframework.context.annotation.Primary;
 
 import javax.sql.DataSource;
 import java.util.Map;
-
+/**
+ * @author lxg
+ */
 @Configuration
 public class DataSourceConfig {
 	@Bean(name = "primaryDataSource")

@@ -7,16 +7,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import springfox.documentation.annotations.ApiIgnore;
 
 /**
- * Created by 刘雪岗 on 2017/1/4.
- */
-
-/**
+ * @author 刘雪岗 on 2017/1/4.
  * 模板引擎使用
  */
 @Controller
 public class IndexController {
 
-    @ApiIgnore  // Swagger2 文档忽略
+    /**Swagger2 文档忽略*/
+    @ApiIgnore
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String index(ModelMap map) {
         map.addAttribute("name","首页");

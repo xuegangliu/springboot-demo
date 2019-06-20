@@ -19,10 +19,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by 刘雪岗 on 2017/1/3.
- */
-
-/**
+ * @author 刘雪岗 on 2017/1/3.
  * swagger2文档测试
  */
 @Controller
@@ -34,8 +31,10 @@ public class UserController {
 
     /**
      * 获取用户列表
+     * @param map
+     * @return
      */
-    @ApiOperation(value = "获取用户列表",notes = "Get方式获取列表") //  swagger2文档描述
+    @ApiOperation(value = "获取用户列表",notes = "Get方式获取列表")
     @RequestMapping(value = "list.action",method = RequestMethod.GET)
     public String getUserList(ModelMap map){
         List<User> list = userService.findAll();
@@ -46,9 +45,10 @@ public class UserController {
     /**
      * 添加用户
      * @param user
+     * @param response
      */
-    @ApiOperation(value = "添加用户",notes = "添加单个用户到数据库") //  swagger2文档描述
-    @ApiImplicitParam(name = "user",value = "用户实体user",required = true,dataType = "User") //  swagger2文档描述
+    @ApiOperation(value = "添加用户",notes = "添加单个用户到数据库")
+    @ApiImplicitParam(name = "user",value = "用户实体user",required = true,dataType = "User")
     @RequestMapping(value = "/add.action",method = RequestMethod.POST)
     public void addUser(@RequestBody User user, HttpServletResponse response){
         userService.create(user.getName(),user.getAge());
@@ -63,8 +63,7 @@ public class UserController {
      * 修改用户
      * @param user
      */
-    @ApiOperation(value = "用户修改",notes = "单个用户修改")  //  swagger2文档描述
-    //  swagger2文档描述
+    @ApiOperation(value = "用户修改",notes = "单个用户修改")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "user", value = "用户实体user", required = true, dataType = "User")
     })
@@ -82,8 +81,8 @@ public class UserController {
      * 按id删除用户
      * @param id
      */
-    @ApiOperation(value = "用户删除",notes = "按用户主键删除用户")  //  swagger2文档描述
-    @ApiImplicitParam(name = "id",value = "用户主键",required = true,dataType = "Integer")  //  swagger2文档描述
+    @ApiOperation(value = "用户删除",notes = "按用户主键删除用户")
+    @ApiImplicitParam(name = "id",value = "用户主键",required = true,dataType = "Integer")
     @RequestMapping(value = "/del.action/{id}",method = RequestMethod.GET)
     public void delById(@PathVariable Integer id,HttpServletResponse response){
         userService.deleteById(id);

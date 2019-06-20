@@ -5,10 +5,9 @@ import com.lxg.sample.entity.User;
 import java.util.List;
 
 /**
- * Created by 刘雪岗 on 2017/1/3.
+ * @author 刘雪岗 on 2017/1/3.
  * 用户接口
  */
-@SuppressWarnings("ALL")
 public interface UserService {
 
     /**
@@ -45,6 +44,7 @@ public interface UserService {
 
     /**
      * 获取用户总量
+     * @return
      */
     Integer getAllUsers();
 

@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by 刘雪岗 on 2017/1/4.
+ * @author 刘雪岗 on 2017/1/4.
  */
 public class GlobalExceptionHandler {
     @ExceptionHandler(value = Exception.class)

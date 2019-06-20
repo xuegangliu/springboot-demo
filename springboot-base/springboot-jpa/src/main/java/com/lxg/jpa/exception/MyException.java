@@ -1,7 +1,8 @@
 package com.lxg.jpa.exception;
 
 /**
- * Created by 刘雪岗 on 2017/1/4.
+ * @author 刘雪岗 on 2017/1/4.
+ *  模板引擎使用
  */
 public class MyException extends Exception {
 

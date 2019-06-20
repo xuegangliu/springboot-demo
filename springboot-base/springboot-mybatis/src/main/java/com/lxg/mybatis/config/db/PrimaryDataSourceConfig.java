@@ -16,11 +16,13 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
 
+/**
+ * @author lxg
+ */
 @Configuration
-// 扫描 Mapper 接口并容器管理
 @MapperScan(basePackages = PrimaryDataSourceConfig.PACKAGE, sqlSessionFactoryRef = "primarySqlSessionFactory")
 public class PrimaryDataSourceConfig {
-    // 精确到 master 目录，以便跟其他数据源隔离
+    /** 精确到 master 目录，以便跟其他数据源隔离 */
     static final String PACKAGE = "com.lxg.mybatis.mapper.primary";
     static final String MAPPER_LOCATION = "classpath:mybatis/mapper/primary/**.xml";
 

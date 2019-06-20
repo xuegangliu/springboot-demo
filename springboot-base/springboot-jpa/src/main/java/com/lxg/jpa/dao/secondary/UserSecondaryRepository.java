@@ -10,13 +10,9 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 /**
- * Created by 刘雪岗 on 2017/1/4.
- */
-
-/**
+ * @author 刘雪岗 on 2017/1/4.
  * jpa 实现(方法命名规则)通过解析方法名创建查询
  */
-@SuppressWarnings("ALL")
 @Repository
 public interface UserSecondaryRepository extends JpaRepository<UserSecondary,Integer>{
 
@@ -48,9 +44,15 @@ public interface UserSecondaryRepository extends JpaRepository<UserSecondary,Int
      * @param name
      * @return
      */
-    @Query("from UserSecondary u where u.name=:name")    // jpa hql实现
+    @Query("from UserSecondary u where u.name=:name")
     UserSecondary findUser(@Param("name") String name);
 
+    /**
+     * 更新用户
+     * @param name
+     * @param age
+     * @param id
+     */
     @Modifying
     @Query("update UserSecondary u set u.name=?1,u.age=?2 where u.id=?3")
     void updateUser(String name, Integer age, Integer id);

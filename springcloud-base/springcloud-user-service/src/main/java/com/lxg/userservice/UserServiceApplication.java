@@ -4,7 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-@EnableDiscoveryClient // 客户端发现
+/**
+ * UserServiceApplication
+ * @author lxg
+ */
+@EnableDiscoveryClient
 @SpringBootApplication
 public class UserServiceApplication {
 

@@ -3,10 +3,7 @@ package com.lxg.mybatis.domain.secondary;
 import java.io.Serializable;
 
 /**
- * Created by 刘雪岗 on 2017/1/12.
- */
-
-/**
+ * @author 刘雪岗 on 2017/1/12.
  * 用户实体类
  */
 public class User implements Serializable {

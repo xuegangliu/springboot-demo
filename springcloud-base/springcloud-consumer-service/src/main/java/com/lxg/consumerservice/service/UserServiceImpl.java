@@ -2,6 +2,9 @@ package com.lxg.consumerservice.service;
 
 import org.springframework.stereotype.Component;
 
+/**
+ * @author lxg
+ */
 @Component
 public class UserServiceImpl implements UserService {
 

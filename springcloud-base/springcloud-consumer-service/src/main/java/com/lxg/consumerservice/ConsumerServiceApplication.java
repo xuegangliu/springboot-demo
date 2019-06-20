@@ -9,15 +9,17 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-
+/**
+ * @author lxg
+ */
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-//@EnableCircuitBreaker
 public class ConsumerServiceApplication {
 
     @Bean
-    @LoadBalanced // 负载均衡
+    /**负载均衡*/
+    @LoadBalanced
     RestTemplate restTemplate() {
         return new RestTemplate();
     }

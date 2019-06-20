@@ -6,8 +6,11 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * 封装RowMapper
+ * @author lxg
+ */
 public class UserRowMapper implements RowMapper<User> {
-    // 封装RowMapper
     @Override
     public User mapRow(ResultSet rs, int rowNum) throws SQLException {
         //rs为返回结果集，以每行为单位封装着

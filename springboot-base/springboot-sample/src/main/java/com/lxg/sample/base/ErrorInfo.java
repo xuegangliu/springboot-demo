@@ -1,7 +1,7 @@
 package com.lxg.sample.base;
 
 /**
- * Created by 刘雪岗 on 2017/1/4.
+ * @author 刘雪岗 on 2017/1/4.
  * 异常处理实体类
  * @param <T>
  */

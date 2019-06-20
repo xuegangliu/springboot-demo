@@ -9,9 +9,8 @@ import java.util.Map;
 
 /**
  * 用户接口 mapper注解实现
- * Created by 刘雪岗 on 2017/1/12.
+ * @author 刘雪岗 on 2017/1/12.
  */
-
 @Mapper
 public interface UserMapper {
 

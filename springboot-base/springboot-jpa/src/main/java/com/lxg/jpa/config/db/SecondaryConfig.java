@@ -15,6 +15,9 @@ import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 import java.util.Map;
 
+/**
+ * @author lxg
+ */
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(

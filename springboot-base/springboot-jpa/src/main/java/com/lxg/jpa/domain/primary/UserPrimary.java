@@ -3,34 +3,30 @@ package com.lxg.jpa.domain.primary;
 import javax.persistence.*;
 
 /**
- * Created by 刘雪岗 on 2017/1/4.
- */
-
-/**
+ * @author 刘雪岗 on 2017/1/4.
  * 用户实体类
  */
 @Table(name = "user")
-@Entity  // jpa实体注解  需要有空构造器
+@Entity
 public class UserPrimary {
 
     /**
      * 主键id
      */
-    @Id // jpa 用户id主键注解
-//    @GeneratedValue //jpa 用户主键id自增注解
+    @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
     /**
      * 用户名
      */
-    @Column(nullable = false)   // jpa 用户名注解 不为空
+    @Column(nullable = false)
     private String name;
 
     /**
      * 年龄
      */
-    @Column(nullable = false)   // jpa 用户年龄注解 不为空
+    @Column(nullable = false)
     private Integer age;
 
     public UserPrimary() {
