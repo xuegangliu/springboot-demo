@@ -12,8 +12,8 @@
     <artifactId>springboot-base</artifactId>
     <packaging>pom</packaging>
 
-    <name>base</name>
-    <url>spring-boot base</url>
+    <name>springboot-base</name>
+    <url>springboot-base</url>
 
     <modules>
         <module>springboot-mybatis</module>

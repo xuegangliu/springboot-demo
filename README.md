@@ -14,11 +14,13 @@ springboot基础练习
 - [springboot-mybatis](https://github.com/xuegangliu/springboot-demo/tree/master/springboot-base/springboot-mybatis)
 - [springboot-nosql](https://github.com/xuegangliu/springboot-demo/tree/master/springboot-base/springboot-nosql)
 - [springboot-sample](https://github.com/xuegangliu/springboot-demo/tree/master/springboot-base/springboot-sample)
+- [springboot-web](https://github.com/xuegangliu/springboot-demo/tree/master/springboot-base/springboot-web)
 
 ## springcloud-base
 springcloud基础练习
 - [springcloud-eureka-server](https://github.com/xuegangliu/springboot-demo/tree/master/springcloud-base/springcloud-eureka-server)
 - [springcloud-config-server](https://github.com/xuegangliu/springboot-demo/tree/master/springcloud-base/springcloud-config-server)
+- [springcloud-admin-service](https://github.com/xuegangliu/springboot-demo/tree/master/springcloud-base/springcloud-admin-service)
 - [springcloud-user-service](https://github.com/xuegangliu/springboot-demo/tree/master/springcloud-base/springcloud-user-service)
 - [springcloud-consumer-service](https://github.com/xuegangliu/springboot-demo/tree/master/springcloud-base/springcloud-consumer-service)
 - [springcloud-gateway-service](https://github.com/xuegangliu/springboot-demo/tree/master/springcloud-base/springcloud-gateway-service)
