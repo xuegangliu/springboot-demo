@@ -9,11 +9,11 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>clould</artifactId>
+    <artifactId>springcloud-base</artifactId>
     <packaging>pom</packaging>
 
-    <name>clould</name>
-    <description>springcloud-base</description>
+    <name>springcloud-base</name>
+    <description>springcloud base</description>
 
     <modules>
         <module>springcloud-eureka-server</module>
